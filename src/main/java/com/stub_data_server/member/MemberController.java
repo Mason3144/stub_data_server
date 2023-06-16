@@ -2,6 +2,7 @@ package com.stub_data_server.member;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +14,7 @@ import java.util.Optional;
 @RequestMapping("/members")
 @CrossOrigin
 public class MemberController {
-    @PostMapping
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity postMember(@RequestBody MemberDto.Request requestBody){
         MemberDto.Response member = MemberDto.Response.builder()
                 .member_id(1)
