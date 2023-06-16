@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @RestController
 @RequestMapping
+@CrossOrigin
 public class HomeController {
     @GetMapping("/home")
     public ResponseEntity getLoggedOutHome(){

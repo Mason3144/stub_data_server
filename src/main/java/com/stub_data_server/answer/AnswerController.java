@@ -14,6 +14,7 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequestMapping("/question/{question-id}/answers")
+@CrossOrigin
 public class AnswerController {
     @PostMapping
     public ResponseEntity postAnswer(@PathVariable("question-id") long questionId,

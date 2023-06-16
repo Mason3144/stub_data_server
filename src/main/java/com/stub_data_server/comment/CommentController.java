@@ -14,6 +14,7 @@ import javax.validation.constraints.Positive;
 @Slf4j
 @RestController
 @RequestMapping("/question/{question-id}/answers/{answer-id}/comments")
+@CrossOrigin
 public class CommentController {
     @PostMapping
     public ResponseEntity postComment(@PathVariable("question-id")  long questionId,

@@ -14,6 +14,7 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequestMapping("/questions")
+@CrossOrigin
 public class QuestionController {
     @PostMapping("ask")
     public ResponseEntity postQuestion(@RequestBody QuestionDto.Request requestBody){

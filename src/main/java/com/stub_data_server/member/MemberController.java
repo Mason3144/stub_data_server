@@ -11,6 +11,7 @@ import java.util.Optional;
 @Slf4j
 @RestController
 @RequestMapping("/members")
+@CrossOrigin
 public class MemberController {
     @PostMapping
     public ResponseEntity postMember(@RequestBody MemberDto.Request requestBody){
