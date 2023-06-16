@@ -44,6 +44,7 @@ public class StubData {
                         .adopted(false)
                         .comments_number(2)
                         .writer(getWriter())
+                        .views(0)
                         .build(),
                 QuestionDto.MultiResponse.builder()
                         .question_id(3)
@@ -52,6 +53,7 @@ public class StubData {
                         .adopted(true)
                         .comments_number(3)
                         .writer(getWriter())
+                        .views(1)
                         .build(),
                 QuestionDto.MultiResponse.builder()
                         .question_id(2)
@@ -60,15 +62,17 @@ public class StubData {
                         .adopted(false)
                         .comments_number(3)
                         .writer(getWriter())
+                        .views(3)
                         .build(),
                 QuestionDto.MultiResponse.builder()
-                  .question_id(1)
-                  .title("첫번째 질문 글 제목")
-                  .created_at(getDate())
-                  .adopted(false)
-                  .comments_number(1)
-                  .writer(getWriter())
-                  .build()
+                      .question_id(1)
+                      .title("첫번째 질문 글 제목")
+                      .created_at(getDate())
+                      .adopted(false)
+                      .comments_number(1)
+                      .writer(getWriter())
+                        .views(5)
+                      .build()
         );
     }
 

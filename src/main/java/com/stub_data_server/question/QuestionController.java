@@ -13,7 +13,7 @@ import java.util.List;
 
 @Slf4j
 @RestController
-@RequestMapping("/question")
+@RequestMapping("/questions")
 public class QuestionController {
     @PostMapping("ask")
     public ResponseEntity postQuestion(@RequestBody QuestionDto.Request requestBody){
@@ -68,7 +68,8 @@ public class QuestionController {
 
     @GetMapping("/board")
     public ResponseEntity getQuestions(@RequestParam int page,
-                                       @RequestParam int size){
+                                       @RequestParam int size,
+                                       @RequestParam String filtered){
         PageInfo pageInfo = PageInfo.builder()
                 .page(page)
                 .size(size)

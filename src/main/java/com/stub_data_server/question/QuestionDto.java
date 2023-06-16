@@ -28,6 +28,7 @@ public class QuestionDto {
         private boolean adopted;
         private MemberDto.Response writer;
         private int comments_number;
+        private int views;
     }
     @Builder
     @Getter
