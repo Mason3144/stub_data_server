@@ -9,7 +9,7 @@ public class MemberDto {
     @Builder
     @Getter
     public static class Response{
-        private long member_id;
+        private long memberId;
         private String nickname;
     }
     @Builder

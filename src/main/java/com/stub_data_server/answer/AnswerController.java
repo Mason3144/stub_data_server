@@ -20,10 +20,10 @@ public class AnswerController {
     public ResponseEntity postAnswer(@PathVariable("question-id") long questionId,
                                      @RequestBody AnswerDto.Request requestBody){
                 AnswerDto.Response response = AnswerDto.Response.builder()
-                .answer_id(1)
+                .answerId(1)
                 .adopted(false)
-                .answer_body(requestBody.getAnswer_body())
-                .created_at(StubData.getDate())
+                .answerBody(requestBody.getAnswerBody())
+                .createdAt(StubData.getDate())
                 .writer(StubData.getWriter())
                 .comments(List.of())
                 .build();
@@ -36,10 +36,10 @@ public class AnswerController {
                                       @PathVariable("answer-id")  long answerId,
                                      @RequestBody AnswerDto.Request requestBody){
         AnswerDto.Response response = AnswerDto.Response.builder()
-                .answer_id(answerId)
+                .answerId(answerId)
                 .adopted(false)
-                .answer_body(requestBody.getAnswer_body())
-                .created_at(StubData.getDate())
+                .answerBody(requestBody.getAnswerBody())
+                .createdAt(StubData.getDate())
                 .writer(StubData.getWriter())
                 .comments(List.of())
                 .build();
@@ -59,10 +59,10 @@ public class AnswerController {
                                       @PathVariable("answer-id")  long answerId){
 
         AnswerDto.Response response = AnswerDto.Response.builder()
-                .answer_id(answerId)
+                .answerId(answerId)
                 .adopted(true)
-                .answer_body("답변 내용")
-                .created_at(StubData.getDate())
+                .answerBody("답변 내용")
+                .createdAt(StubData.getDate())
                 .writer(StubData.getWriter())
                 .comments(List.of())
                 .build();
@@ -74,10 +74,10 @@ public class AnswerController {
                                       @PathVariable("answer-id")  long answerId){
 
         AnswerDto.Response response = AnswerDto.Response.builder()
-                .answer_id(answerId)
+                .answerId(answerId)
                 .adopted(false)
-                .answer_body("답변 내용")
-                .created_at(StubData.getDate())
+                .answerBody("답변 내용")
+                .createdAt(StubData.getDate())
                 .writer(StubData.getWriter())
                 .comments(List.of())
                 .build();

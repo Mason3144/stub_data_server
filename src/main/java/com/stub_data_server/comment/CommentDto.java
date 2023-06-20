@@ -11,10 +11,10 @@ public class CommentDto {
     @Builder
     @Getter
     public static class Response{
-        private long answer_id;
-        private long comment_id;
-        private String comment_body;
-        private String created_at;
+        private long answerId;
+        private long commentId;
+        private String commentBody;
+        private String createdAt;
         private MemberDto.Response writer;
     }
 
@@ -23,7 +23,7 @@ public class CommentDto {
     @Builder
     @Getter
     public static class Request{
-        private long comment_id;
-        private String comment_body;
+        private long commentId;
+        private String commentBody;
     }
 }

@@ -17,7 +17,7 @@ public class MemberController {
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity postMember(@RequestBody MemberDto.Request requestBody){
         MemberDto.Response member = MemberDto.Response.builder()
-                .member_id(1)
+                .memberId(1)
                 .nickname(requestBody.getNickname())
                 .build();
         log.info("회원 가입 완료");
@@ -27,7 +27,7 @@ public class MemberController {
     @GetMapping("/{member-id}")
     public ResponseEntity getMember(@PathVariable("member-id") long memberId){
         MemberDto.Response member = MemberDto.Response.builder()
-                .member_id(memberId)
+                .memberId(memberId)
                 .nickname("hgd123")
                 .build();
         log.info("회원 조회 완료");
@@ -42,7 +42,7 @@ public class MemberController {
     public ResponseEntity patchMember(@PathVariable("member-id") long memberId,
                                       @RequestBody MemberDto.Request requestBody){
         MemberDto.Response member = MemberDto.Response.builder()
-                .member_id(memberId)
+                .memberId(memberId)
                 .nickname(requestBody.getNickname()==null?"hgd123":requestBody.getNickname())
                 .build();
 

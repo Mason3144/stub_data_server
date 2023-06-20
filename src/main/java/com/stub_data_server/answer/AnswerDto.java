@@ -18,10 +18,10 @@ public class AnswerDto {
     @Builder
     @Getter
     public static class Response{
-        private long answer_id;
-        private String answer_body;
+        private long answerId;
+        private String answerBody;
         private boolean adopted;
-        private String created_at;
+        private String createdAt;
         private MemberDto.Response writer;
         private List<CommentDto.Response> comments;
     }
@@ -29,7 +29,7 @@ public class AnswerDto {
     @Builder
     @Getter
     public static class Request{
-        private long answer_id;
-        private String answer_body;
+        private long answerId;
+        private String answerBody;
     }
 }

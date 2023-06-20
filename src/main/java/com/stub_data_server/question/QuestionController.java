@@ -20,10 +20,10 @@ public class QuestionController {
     public ResponseEntity postQuestion(@RequestBody QuestionDto.Request requestBody){
 
         QuestionDto.Response response = QuestionDto.Response.builder()
-                .question_id(1)
+                .questionId(1)
                 .title(requestBody.getTitle())
                 .body(requestBody.getBody())
-                .created_at(StubData.getDate())
+                .createdAt(StubData.getDate())
                 .writer(StubData.getWriter())
                 .answers(List.of())
                 .build();
@@ -36,10 +36,10 @@ public class QuestionController {
                                         @RequestBody QuestionDto.Request requestBody){
 
         QuestionDto.Response response = QuestionDto.Response.builder()
-                .question_id(questionId)
+                .questionId(questionId)
                 .title(requestBody.getTitle())
                 .body(requestBody.getBody())
-                .created_at(StubData.getDate())
+                .createdAt(StubData.getDate())
                 .writer(StubData.getWriter())
                 .answers(List.of())
                 .build();
@@ -56,10 +56,10 @@ public class QuestionController {
     @GetMapping("/{question-id}")
     public ResponseEntity getQuestion(@PathVariable("question-id") long questionId){
         QuestionDto.Response response = QuestionDto.Response.builder()
-                .question_id(questionId)
+                .questionId(questionId)
                 .title("질문 제목")
                 .body("질문 본문 20자 이상")
-                .created_at(StubData.getDate())
+                .createdAt(StubData.getDate())
                 .writer(StubData.getWriter())
                 .answers(StubData.getAnswers())
                 .build();
@@ -70,7 +70,7 @@ public class QuestionController {
     @GetMapping("/board")
     public ResponseEntity getQuestions(@RequestParam int page,
                                        @RequestParam int size,
-                                       @RequestParam String filtered){
+                                       @RequestParam String sort){
         PageInfo pageInfo = PageInfo.builder()
                 .page(page)
                 .size(size)

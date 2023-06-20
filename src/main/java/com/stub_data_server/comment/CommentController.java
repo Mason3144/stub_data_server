@@ -22,10 +22,10 @@ public class CommentController {
                                      @RequestBody CommentDto.Request requestBody){
 
         CommentDto.Response response = CommentDto.Response.builder()
-                .answer_id(answerId)
-                .comment_id(1)
-                .comment_body(requestBody.getComment_body())
-                .created_at(StubData.getDate())
+                .answerId(answerId)
+                .commentId(1)
+                .commentBody(requestBody.getCommentBody())
+                .createdAt(StubData.getDate())
                 .writer(StubData.getWriter())
                 .build();
         log.info("댓글 생성 완료");
@@ -39,10 +39,10 @@ public class CommentController {
                                       @RequestBody CommentDto.Request requestBody){
 
         CommentDto.Response response = CommentDto.Response.builder()
-                .answer_id(answerId)
-                .comment_id(commentId)
-                .comment_body(requestBody.getComment_body())
-                .created_at(StubData.getDate())
+                .answerId(answerId)
+                .commentId(commentId)
+                .commentBody(requestBody.getCommentBody())
+                .createdAt(StubData.getDate())
                 .writer(StubData.getWriter())
                 .build();
         log.info("댓글 수정 완료");

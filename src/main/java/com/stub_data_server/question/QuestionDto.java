@@ -12,22 +12,22 @@ public class QuestionDto {
     @Builder
     @Getter
     public static class Response{
-        private long question_id;
+        private long questionId;
         private String title;
         private String body;
-        private String created_at;
+        private String createdAt;
         private MemberDto.Response writer;
         private List<AnswerDto.Response> answers;
     }
     @Builder
     @Getter
     public static class MultiResponse{
-        private long question_id;
+        private long questionId;
         private String title;
-        private String created_at;
+        private String createdAt;
         private boolean adopted;
         private MemberDto.Response writer;
-        private int comments_number;
+        private int commentsNumber;
         private int views;
     }
     @Builder
