@@ -80,4 +80,10 @@ public class QuestionController {
         log.info("게시판 조회 완료");
         return new ResponseEntity(new MultiResponseDto(StubData.getQuestions(),pageInfo), HttpStatus.OK);
     }
+    @GetMapping("/home")
+    public ResponseEntity getQuestionsHome(){
+
+        log.info("게시판 조회 완료");
+        return new ResponseEntity(new MultiResponseDto(StubData.getQuestions(),null), HttpStatus.OK);
+    }
 }
